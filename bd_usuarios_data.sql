@@ -5,7 +5,6 @@
 -- Compatible con PostgreSQL
 -- ============================================================
 
-BEGIN;
 
 -- ====== Tabla: usuario ======
 INSERT INTO usuario (id, username, contrasena, rol, empresa_id) VALUES (1, 'andrea.cifuentes', '$2b$12$Zc4vlPQGvwy/M1iVSWMZXcbxCIhHAu1LlD24oRmR9LueYNUjfFSFN', 'IngenieroCloud', 24);
@@ -566,4 +565,3 @@ INSERT INTO intento_acceso_no_autorizado (id, acceso_id, area_id, usuario_id, ip
 INSERT INTO intento_acceso_no_autorizado (id, acceso_id, area_id, usuario_id, ip_origen, fecha, metodo_intento, bloqueado, tipo) VALUES (29, 'acc-147', 8, NULL, 1292183134, '2026-04-24 21:01:19.750', 'brute_force_ssh', FALSE, 'usuario_desconocido');
 INSERT INTO intento_acceso_no_autorizado (id, acceso_id, area_id, usuario_id, ip_origen, fecha, metodo_intento, bloqueado, tipo) VALUES (30, 'acc-179', 88, 8, 3232236284, '2026-04-24 16:39:13.201', 'credential_stuffing', TRUE, 'area_no_autorizada');
 
-COMMIT;
